@@ -85,26 +85,6 @@ internal class LinBinSearch
     private static void BinPes()
     {
         var Stoper = new Stopwatch();
-        var file = new StreamWriter("bin_pes.csv");
-        for (var i = 10; i <= 28; i++)
-        {
-            var n = (1 << i) - 1; // 2^i - 1
-            Cnt = 0;
-            
-            Stoper.Start();
-            BinSearch(n, 0);
-            Stoper.Stop();
-            file.WriteLine("{0}; {1}; {2}; Czas: {3}", i, n, Cnt, Stoper.ElapsedMilliseconds);
-            Console.WriteLine("{0}; {1}; {2}; Czas: {3}", i, n, Cnt, Stoper.ElapsedMilliseconds);
-            Stoper.Reset();
-        }
-
-        file.Close();
-    }
-//--------------------
-    private static void BinPes()
-    {
-        var Stoper = new Stopwatch();
         var file = new StreamWriter("bin_pes_czas.csv");
         for (var i = 10; i <= 28; i++)
         {
